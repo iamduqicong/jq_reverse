@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>08-提交事件</title>
+    <style>
+      p {
+        color: #333;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>提交事件</h3>
+    <p>form标签本来具有提交数据的能力，但现在基本不这么用</p>
+
+    <form >
+        <input type="text" placeholder="用户名">
+        <br>
+        <!-- <br> 让这里的标签自动换行，不然两个框儿会在同一行上 -->
+        <input type="text" placeholder="密码">
+        <br>
+        <input type="submit" value="提交">
+        <button>提交</button>
+    </form>
+
+    <script src="./jquery-3.5.1.js"></script>
+    <script>
+      $('form').submit(function(event){
+        event.preventDefault()
+        console.log('submit')
+
+        return true
+      })
+    </script>
+  </body>
+</html>

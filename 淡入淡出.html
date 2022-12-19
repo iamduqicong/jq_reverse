@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>06-淡入&淡出动画</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        margin-top: 20px;
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  
+  <body>
+    <h3>淡入淡出</h3>
+    <p>jquery中封装了元素显示与隐藏的快捷操作</p>
+    <button class="fade-in">淡入</button>
+    <button class="fade-out">淡出</button>
+    <button class="fade-toggle">二合一</button>
+
+    <div class="box"></div>
+    <p>Whatever</p>
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+        $('.fade-in').click(function(){
+            $('.box').fadeIn(2000)
+        })
+        $('.fade-out').click(function(){
+            $('.box').fadeOut(2000)
+        })
+        $('.fade-toggle').click(function(){
+            $('.box').fadeToggle(2000)
+        })
+
+
+    </script>
+  </body>
+</html>

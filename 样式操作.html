@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+      div {
+        width: 200px;
+        height: 200px;
+        margin-top: 20px;
+        border: 1px solid #000;
+      }
+    </style>
+</head>
+<body>
+    
+    <h3>11-样式操纵</h3>
+    <p>css可以获取及设置元素样式,设置的是行内样式</p>
+    <!-- 测试用的盒子 -->
+    <div class="box"></div>
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+        $('.box').css('backgroundColor', 'pink')
+        $('.box').css('border', '10px solid orange')
+        $('.box').css('width', '250px')
+        $('.box').css('height', 250)
+
+        $('.box').css({
+            backgroundColor: 'skyblue',
+        border: '10px solid yellowgreen',
+        width: 100,
+        height: 100
+        })
+
+
+        let width=$('.box').css('width')
+        console.log('width:',width)
+    </script>
+
+</body>
+</html>

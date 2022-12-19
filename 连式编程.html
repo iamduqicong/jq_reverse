@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>07-lianshibiancheng</title>
+    <style>
+         body {
+        padding: 0 30px 40px;
+      }
+
+      p {
+        color: #333;
+      }
+    </style>
+</head>
+<body>
+    <h3>07-链式编程</h3>
+    <p>链式编程 通过点(.) 把多个操作连续的写下去, 形成和 链子 一样的结构</p>
+    <!-- 测试用 输入框 -->
+    <input type="text" class="text" />
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+        $('.text').focus(function(){
+            console.log('获得焦点')
+        })
+        .blur(function(){
+            console.log('失去焦点')
+        })
+        .change(function(){
+            console.log('内容改变')
+        })
+
+        let $text=$('.text')
+        let $text2=$text.focus(function(){
+            console.log($test === $test2)
+        })
+    </script>
+</body>
+</html>

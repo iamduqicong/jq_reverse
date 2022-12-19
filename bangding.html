@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件绑定</title>
+
+    <style> body {
+        padding: 0 30px 40px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        background-color: yellowgreen;
+        margin: 10px 10px 10px 0;
+      }
+      input {
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }</style>
+</head>
+<body>
+
+    <h3>06-事件绑定</h3>
+    <p>在 jQuery 中以原生事件类型的名称为依据 , 封装了相对应的事件处理方法</p>
+    <ul>
+      <li>黑马程序员</li>
+      <li>北京校区</li>
+      <li>上海校区</li>
+      <li>广州校区</li>
+      <li>深圳校区</li>
+    </ul>
+    <input type="text" class="text" />
+    <div class="box"></div>
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+        $('li').click(function(){
+            let $this=$(this)
+            $this.css('backgroundColor', 'pink')
+        })
+
+        $('.text').focus(function(){
+            console.log('focus')
+        })
+
+        $('.box').mouseenter(function(){
+            console.log('mouseenter')
+        $(this).css('backgroundColor', 'pink')
+        })
+
+        $('.box').mouseleave(function(){
+            console.log('mouseleave')
+        $(this).css('backgroundColor', 'yellowgreen')
+        })
+    </script>
+    
+</body>
+</html>

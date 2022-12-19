@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10-过滤方法</title>
+    <style>
+         body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+    </style>
+</head>
+<body>
+    
+    <h3>过滤方法</h3>
+    <p>对获取到的元素进行过滤,返回的依旧是jQuery对象</p>
+    <ul>
+      <li>html</li>
+      <li>css</li>
+      <li>javascript</li>
+    </ul>
+
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+
+        $('li').first().css('backgroundColor', 'pink')
+        $('li').last().css('backgroundColor', 'yellowgreen')
+        $('li').eq(1).css('backgroundColor', 'skyblue')
+
+
+    </script>
+
+
+
+
+</body>
+</html>

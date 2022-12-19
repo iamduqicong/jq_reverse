@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>事件进阶</title>
+    <style>
+         body {
+        padding: 0 30px 40px;
+      }
+
+      p {
+        color: #333;
+      }
+      button {
+        margin-top: 10px;
+      }
+    </style>
+</head>
+<body>
+    <h4>17-事件进阶</h4>
+    <p>
+      jQuery 中封装了更为灵活的 on/off、one 方法处理 DOM 事件
+    </p>
+    <!-- 测试标签 -->
+    <input type="text" class="onoff" />
+    <br />
+    <button class="one">支付</button>
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+        $('.onoff').on('focus',function(){
+            console.log('获得焦点')
+        })
+
+        $('.onoff').on('blur',function(){
+            console.log('失去焦点')
+        })
+
+        $('.onoff').off('focus')
+
+        $('.onoff').off()
+
+        $('.one').one('click',function () {
+        alert('支付成功998元')})
+        
+    </script>
+</body>
+</html>

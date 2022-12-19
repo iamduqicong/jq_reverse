@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>18-事件委托</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .box {
+        width: 500px;
+        height: 100px;
+        background-color: yellowgreen;
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        margin-top: 10px;
+      }
+      img {
+        margin-right: 5px;
+      }
+      hr {
+        margin: 15px 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>事件委托</h3>
+    <p>23333333333333</p>
+
+    <hr>
+    <button class="add">添加元素</button>
+    <div class="box">
+        <img src="./img/旺财.jpg" alt="" class="dog">
+        <img src="./img/旺财.jpg" alt="" class="dog">
+        <img src="./img/旺财.jpg" alt="" class="dog">
+        <img src="./img/旺财.jpg" alt="" class="dog">
+    </div>
+
+    
+    //事件委托可以减少事件注册
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+        $('.box').on('click','.dog',function(){
+            $(this).remove()
+        })
+
+        //新增后代元素
+        $('.add').click(function(){
+            $('.box').append('<img src="./img/旺财2.jpg" alt="" class="doge">')
+        })
+
+        $('.box').on('click','.doge',function(){
+        console.log(this)
+        })
+
+        $('.dog').click(function(e){
+            e.stopPropagation()
+        })
+    </script>
+  </body>
+
+</html>

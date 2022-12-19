@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12-获取dom对象</title>
+    <style>
+      p {
+        color: #333;
+      }
+      video {
+        margin: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>获取dom对象</h3>
+    <p>jq封装了获取内部dom对象的方法</p>
+    <button class="play">播放</button>
+    <button class="pause">暂停</button>
+    <br>
+    <video src="./video/video.mp4"></video>
+
+    <form action="">
+        <input type="text" placeholder="请输入用户名">
+        <br>
+        <input type="text" placeholder="请输入密码">
+        <br>
+        <input type="button" value="重置" class="reset">
+    </form>
+
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script>
+        // get方法
+        let $btn=$('button')
+        console.log('$btn:',$btn)
+        let pauseBtn=$btn.get(1)
+        console.log('pauseBtn',pauseBtn)
+
+        // 中括号
+        let playBtn=$btn[0]
+        console.log('pauseBtn:',pauseBtn)
+
+        // 播放视频
+        $('.play').click(function(){
+            let video=$('video')[0]
+            console.log('video:',video)
+            video.play()
+        })
+        $('.pause').click(function(){
+            let video=$('video')[0]
+            console.log('video:',video)
+            video.pause()
+        })
+        // 重设
+        $('.reset').click(function(){
+            let form=$('form')[0]
+            console.log('form:',form)
+            form.reset()
+        })
+    </script>
+  </body>
+</html>

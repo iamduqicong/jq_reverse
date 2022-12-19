@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+
+</head>
+<body>
+    <h3>05-jQuery 对象</h3>
+    <p>
+      jQuery 中利用选择器获取到的并非原生的 DOM对象，而是 jQuery 对象
+    </p>
+
+    <h4>将原生 DOM 对象转换成 jQuery 对象后，便可以调用其实例中的方法了。</h4>
+    <ul>
+      <li>html</li>
+      <li>css</li>
+      <li>javascript</li>
+      <li>jQuery</li>
+    </ul>
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+        let $li=$('li')
+        console.log('li:',$li)
+
+        $li.css('backgroundColor', 'hotpink')
+
+        let $li2=$($li)
+        $li2.css('backgroundColor', 'skyblue')
+    </script>
+</body>
+</html>

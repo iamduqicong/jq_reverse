@@ -1,0 +1,44 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>13-动画的延迟方法</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .box {
+        width: 200px;
+        height: 100px;
+        margin-top: 20px;
+        background-color: yellowgreen;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>动画的延迟方法</h3>
+    <p>jq不仅可以设置动画的执行速度，还能在执行前设定一定的延时</p>
+
+    <button class="animate">动画</button>
+
+    <div class="box"></div>
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+        $('.animate').click(function(){
+            $('.box')
+            .delay(2000)
+            .fadeOut()
+            .delay(2000)
+            .slideDown()
+        })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>04-懒加载插件</title>
+    <style>
+      .wall {
+        height: 3000px;
+        background-color: orange;
+      }
+    </style>
+  </head>
+<body>
+    <h3>懒加载插件</h3>
+    <p>意思是用到了再加载</p>
+
+    <div class="wall"></div>
+
+    <img class="lazyload" src="./images/1.png" alt="">
+    <img class="lazyload" src="./images/2.png" alt="">
+
+    <script src="./jquery/jquery-3.5.1.js"></script>
+    <script src="./lazyload/jquery.lazyload.min.js"></script>
+
+    <script>
+        $('.lazyload').lazyload()
+    </script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>11-插入节点</title>
+    <style>
+      body {
+        padding: 0 30px;
+      }
+
+      p {
+        color: #333;
+      }
+
+      .container {
+        overflow: hidden;
+        background-color: pink;
+        text-align: center;
+      }
+
+      img {
+        margin: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h3>节点操作</h3>
+    <p>jq中封装了在指定位置动态添加元素节点的方法，可以新增节点或者改变节点位置</p>
+    <div class="insert">
+        <h4>01-插入节点</h4>
+        <button class="append">父元素结尾添加</button>
+        <button class="prepend">父元素开头添加</button>
+        <button class="before">兄弟元素前添加</button>
+        <button class="after">兄弟元素后添加</button>
+    </div>
+    <hr>
+    <div class="move">
+        <h4>02-改变位置</h4>
+        <button class="append">父元素结尾</button>
+        <button class="prepend">父元素开头</button>
+        <button class="before">兄弟元素前</button>
+        <button class="after">兄弟元素后</button>
+    </div>
+    <hr>
+
+    <div class="container">
+        <img class="Amumu" src="http://game.gtimg.cn/images/lol/act/img/champion/Amumu.png" alt="">
+        <img class="Teemo" src="http://game.gtimg.cn/images/lol/act/img/champion/Teemo.png" alt="">
+        <img class="kennen" src="http://game.gtimg.cn/images/lol/act/img/champion/Kennen.png" alt="">
+    </div>
+    <img src="./img/旺财2.jpg" class="doge" alt="">
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+        $('.insert .append').click(function(){
+            $('.container').append('<img src="./img/旺财.jpg" alt="">')
+        })
+
+        $('.insert .prepend').click(function(){
+            $('.container').prepend('<img src="./img/旺财.jpg" alt="">')
+        })
+        $('.insert .before').click(function(){
+            $('.Teemo').before('<img src="./img/旺财.jpg" alt="">')
+        })
+        $('.insert .after').click(function(){
+            $('.Teemo').after('<img src="./img/旺财.jpg" alt="">')
+        })
+
+        $('.move .append').click(function(){
+            $('.container').append($('.doge'))
+        })
+
+        $('.move .prepend').click(function(){
+            $('.container').prepend($('.doge'))
+        })
+        $('.move .before').click(function(){
+            $('.Teemo').before($('.doge'))
+        })
+        $('.move .after').click(function(){
+            $('.Teemo').after($('.doge'))
+        })
+
+        
+    </script>
+    
+  </body>
+  
+</html>

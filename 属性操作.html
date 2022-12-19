@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>操纵Value</title>
+  <style>
+    body {
+        padding: 0 30px;
+      }
+      p {
+        color: #333;
+      }
+  </style>
+</head>
+<body>
+  <h3>14-操纵value</h3>
+    <p>jQuery 中封装了操纵value属性的方法，可以取值和赋值</p>
+    <!-- 测试用输入框 -->
+    <input class="text" type="text" />
+
+    <script src="./jquery-3.6.1.js"></script>
+    <script>
+      $('.text').val('heima')
+      $('.text').blur(function(){
+        let value=$(this).val()
+        console.log('value:', value)
+      })
+    </script>
+</body>
+</html>
